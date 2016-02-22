@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunctionalPractice.cs" />
     <Compile Include="List.cs" />
     <Compile Include="ListTests.cs" />
+    <Compile Include="FunctionalTests.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
