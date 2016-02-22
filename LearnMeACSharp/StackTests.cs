@@ -48,10 +48,10 @@ namespace LearnMeACSharp
         public void LargeStackTest()
         {
             int size = 5000000;
-            Stack<Object> bigStack = new Stack<Object>();
+            Stack<int> bigStack = new Stack<int>();
             for (int i = 0; i < size; i++)
             {
-                bigStack.Push(new Object());
+                bigStack.Push(i);
             }
             Assert.Equal(size, bigStack.Count);
         }

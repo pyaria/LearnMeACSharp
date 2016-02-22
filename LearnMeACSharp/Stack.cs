@@ -7,23 +7,41 @@ namespace LearnMeACSharp
 {
     public class Stack<T>
     {
-        T[] _backingStore;
+        int length = 2;
+        T[] _backingStore = new T[2];
+        int top = 0;
         public void Push(T x)
         {
-            throw new NotImplementedException();
+            if(top < length)
+            {
+                _backingStore[top] = x;
+                top++;
+            }
+            else
+            {
+                var newLength = length * 2;
+                T[] newArray = new T[newLength];
+                Array.Copy(_backingStore, newArray, top);
+                _backingStore = newArray;
+                length = newLength;
+                _backingStore[top] = x;
+                top++;
+            }
         }
         public T Pop()
         {
-            throw new NotImplementedException();
+            top--;
+            return (_backingStore[top]);
+   
         }
         public T Peek()
         {
-            throw new NotImplementedException();
+            return (_backingStore[top - 1]);
         }
         public int Count {
             get
             {
-                throw new NotImplementedException();
+                return top;
             }
         }    
     }
