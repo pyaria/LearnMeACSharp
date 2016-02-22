@@ -71,6 +71,9 @@ namespace LearnMeACSharp
             throw new NotImplementedException();
         }
 
+        //Enumerators are objects that handle iterating over a collection https://en.wikipedia.org/wiki/Iterator
+        //They have special syntax in C#.
+        //Check out: https://msdn.microsoft.com/library/65zzykke%28v=vs.100%29.aspx
         public System.Collections.Generic.IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
