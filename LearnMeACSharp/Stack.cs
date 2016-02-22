@@ -7,6 +7,7 @@ namespace LearnMeACSharp
 {
     public class Stack<T>
     {
+        T[] _backingStore;
         public void Push(T x)
         {
             throw new NotImplementedException();
