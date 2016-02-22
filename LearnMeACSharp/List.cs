@@ -3,19 +3,15 @@ using System.Text;
 
 namespace LearnMeACSharp
 {
+    //Should implement this interface: https://msdn.microsoft.com/en-us/library/system.collections.ilist%28v=vs.110%29.aspx
     public class List<T> : System.Collections.Generic.IList<T>
     {
-        public int IndexOf(T item)
+        T[] _backingArray;
+        public int Count
         {
-            throw new NotImplementedException();
+            get { throw new NotImplementedException(); }
         }
-
-        public void Insert(int index, T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveAt(int index)
+        public void Add(T item)
         {
             throw new NotImplementedException();
         }
@@ -31,8 +27,17 @@ namespace LearnMeACSharp
                 throw new NotImplementedException();
             }
         }
+        public int IndexOf(T item)
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Add(T item)
+        public void Insert(int index, T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveAt(int index)
         {
             throw new NotImplementedException();
         }
@@ -46,16 +51,13 @@ namespace LearnMeACSharp
         {
             throw new NotImplementedException();
         }
-
+        //Copies the elements of the ICollection to an Array, starting at a particular Array index.
         public void CopyTo(T[] array, int arrayIndex)
         {
             throw new NotImplementedException();
         }
 
-        public int Count
-        {
-            get { throw new NotImplementedException(); }
-        }
+
 
         public bool IsReadOnly
         {
@@ -69,6 +71,9 @@ namespace LearnMeACSharp
             throw new NotImplementedException();
         }
 
+        //Enumerators are objects that handle iterating over a collection https://en.wikipedia.org/wiki/Iterator
+        //They have special syntax in C#.
+        //Check out: https://msdn.microsoft.com/library/65zzykke%28v=vs.100%29.aspx
         public System.Collections.Generic.IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
