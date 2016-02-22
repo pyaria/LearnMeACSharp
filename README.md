@@ -1,4 +1,4 @@
 LearnMeACSharp
 ==============
 
-Learn me a C# for great good
+A set of XUnit tests designed as programming challenges to teach intermediate C#.
