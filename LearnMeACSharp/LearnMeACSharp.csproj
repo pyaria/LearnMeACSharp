@@ -63,9 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FunctionMagic.cs" />
-    <Compile Include="MainTests.cs" />
-    <Compile Include="MyList.cs" />
+    <Compile Include="List.cs" />
+    <Compile Include="ListTests.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
