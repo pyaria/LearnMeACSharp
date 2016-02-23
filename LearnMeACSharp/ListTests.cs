@@ -10,7 +10,7 @@ namespace LearnMeACSharpTests
         public void AddTest()
         {
             var controlList = new System.Collections.Generic.List<int>();
-            System.Collections.Generic.IList<int> testList = new List<int>();
+            System.Collections.Generic.IList<int> testList = new MyList<int>();
 
             var r = new System.Random();
             for (int i = 0; i < 1000; i++)
@@ -26,7 +26,7 @@ namespace LearnMeACSharpTests
         [Fact]
         public void AddIndexAndValueCheckTest()
         {
-            System.Collections.Generic.IList<int> testList = new List<int>();
+            System.Collections.Generic.IList<int> testList = new MyList<int>();
             var controlList = new System.Collections.Generic.List<int>();
             var r = new System.Random();
             for (int i = 0; i < 1000; i++)
@@ -46,7 +46,7 @@ namespace LearnMeACSharpTests
         public void AddAndRemoveAtTest()
         {
             var controlList = new System.Collections.Generic.List<int>();
-            System.Collections.Generic.IList<int> testList = new List<int>();
+            System.Collections.Generic.IList<int> testList = new MyList<int>();
             var r = new System.Random();
             for (int i = 0; i < 1000; i++)
             {
@@ -73,7 +73,7 @@ namespace LearnMeACSharpTests
         [Fact]
         public void ListRNDTest()
         {
-            System.Collections.Generic.IList<int> testList = new List<int>();
+            System.Collections.Generic.IList<int> testList = new MyList<int>();
             var controlList = new System.Collections.Generic.List<int>();
             var r = new System.Random();
             for (int i = 0; i < 1000; i++)
@@ -87,6 +87,11 @@ namespace LearnMeACSharpTests
             {
                 Assert.True(testList.IndexOf(controlList[i]) == i);
             }
+            foreach (var itm in controlList)
+            {
+                Assert.True(testList.Contains(itm));
+            }
+
             for (int i = 0; i < controlList.Count; i++)
             {
                 if (r.Next() < int.MaxValue / 2)
